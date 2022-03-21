@@ -1,8 +1,15 @@
+/** Generales */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/** Librerias */
+import { MaterialDesignFrameworkModule } from '@ajsf/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+/** Rutas */
 import { AppRoutingModule } from './app-routing.module';
+/** Componentes */
 import { AppComponent } from './app.component';
+/** Modulos */
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -12,7 +19,10 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialDesignFrameworkModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
