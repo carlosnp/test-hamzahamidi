@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 /** Modulos */
 import { SharedModule } from './shared/shared.module';
+import { SchemaFormModule } from './schema-form/schema-form.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     MaterialDesignFrameworkModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SchemaFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
