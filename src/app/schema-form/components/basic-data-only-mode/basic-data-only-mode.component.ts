@@ -31,7 +31,7 @@ export class BasicDataOnlyModeComponent {
         "type_number": "decimal"
       }
     ],
-    "notes": ""
+    "notes": "",
   };
   constructor() { }
 }
