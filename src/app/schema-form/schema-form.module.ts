@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SchemaFormRoutingModule } from './schema-form-routing.module';
 /** Componentes */
+import { BaseSchemaComponent } from './base-schema/base-schema.component';
 import { BasicDataOnlyModeComponent } from './components/basic-data-only-mode/basic-data-only-mode.component';
 import { BasicSchemaComponent } from './components/basic-schema/basic-schema.component';
 /** Librerias */
@@ -10,11 +11,14 @@ import { MaterialDesignFrameworkModule } from '@ajsf/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     BasicDataOnlyModeComponent,
-    BasicSchemaComponent
+    BasicSchemaComponent,
+    BaseSchemaComponent
   ],
   imports: [
     CommonModule,
@@ -23,11 +27,12 @@ import {MatButtonModule} from '@angular/material/button';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule,
+    MatFormFieldModule
   ],
   exports:[
-    BasicDataOnlyModeComponent,
-    BasicSchemaComponent
+    BaseSchemaComponent
   ]
 })
 export class SchemaFormModule { }

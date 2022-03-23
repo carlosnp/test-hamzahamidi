@@ -1,8 +1,20 @@
-<div style="border: 1px solid red; display: flex; padding: 20px">
+<div class="content-form">
   <json-schema-form
     [loadExternalAssets]="true"
     [schema]="jsonSchema"
-    framework="no-framework"
-    (onSubmit)="eventRegister($event)">
+    [form]="formSchema"
+    [language]="'es'"
+    [framework]="'material-design'"
+    (isValid)="isValidForm($event)"
+    (onSubmit)="eventRegister($event)"
+  >
   </json-schema-form>
+</div>
+<div *ngIf="newFormValues" class="console">
+  <div class="title_terminal">
+    VALORES DEL FORMULARIO
+  </div>
+  <div>
+    <pre>{{newFormValues | json}}</pre>
+  </div>
 </div>
