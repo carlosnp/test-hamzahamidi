@@ -13,12 +13,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { BasicSchemaDataComponent } from './components/basic-schema-data/basic-schema-data.component';
 
 @NgModule({
   declarations: [
     BasicDataOnlyModeComponent,
     BasicSchemaComponent,
-    BaseSchemaComponent
+    BaseSchemaComponent,
+    BasicSchemaDataComponent
   ],
   imports: [
     CommonModule,

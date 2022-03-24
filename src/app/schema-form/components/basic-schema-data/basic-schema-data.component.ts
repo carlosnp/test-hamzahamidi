@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-basic-schema',
-  templateUrl: './basic-schema.component.html',
-  styleUrls: ['./basic-schema.component.scss']
+  selector: 'app-basic-schema-data',
+  templateUrl: './basic-schema-data.component.html',
+  styleUrls: ['./basic-schema-data.component.scss']
 })
-export class BasicSchemaComponent implements OnInit {
+export class BasicSchemaDataComponent implements OnInit {
   jsonSchema={
     "type": "object",
     "title": "test_form",
@@ -37,14 +37,13 @@ export class BasicSchemaComponent implements OnInit {
       "type": "text",
       "appearance": "standard",
       "htmlClass": "html-class-form",
-      "fieldHtmlClass": "field-html-class-form",
-      "labelHtmlClass": "label-html-class-form",
       "placeholder": "Escribe tu nombre"
     },
     {
       "key": "email",
       "type": "email",
       "appearance": "fill",
+      "description": "Email will be used for evil.",
       "htmlClass": "html-class-form",
     },
     {
