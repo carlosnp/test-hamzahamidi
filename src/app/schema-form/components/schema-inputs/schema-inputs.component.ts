@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-basic-schema',
-  templateUrl: './basic-schema.component.html',
-  styleUrls: ['./basic-schema.component.scss']
+  selector: 'app-schema-inputs',
+  templateUrl: './schema-inputs.component.html',
+  styleUrls: ['./schema-inputs.component.scss']
 })
-export class BasicSchemaComponent implements OnInit {
+export class SchemaInputsComponent implements OnInit {
   jsonSchema={
     "type": "object",
     "title": "test_form",

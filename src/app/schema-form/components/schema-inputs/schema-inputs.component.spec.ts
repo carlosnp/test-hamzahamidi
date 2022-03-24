@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicSchemaComponent } from './basic-schema.component';
+import { SchemaInputsComponent } from './schema-inputs.component';
 
-describe('BasicSchemaComponent', () => {
-  let component: BasicSchemaComponent;
-  let fixture: ComponentFixture<BasicSchemaComponent>;
+describe('SchemaInputsComponent', () => {
+  let component: SchemaInputsComponent;
+  let fixture: ComponentFixture<SchemaInputsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BasicSchemaComponent ]
+      declarations: [ SchemaInputsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BasicSchemaComponent);
+    fixture = TestBed.createComponent(SchemaInputsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
