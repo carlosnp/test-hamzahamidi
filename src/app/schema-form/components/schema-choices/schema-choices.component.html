@@ -1,0 +1,21 @@
+<div class="form-basic-schema">
+  <json-schema-form
+    [loadExternalAssets]="true"
+    [schema]="jsonSchema"
+    [form]="formSchema"
+    [language]="'es'"
+    [framework]="'material-design'"
+    [debug]="true"
+    (isValid)="isValidForm($event)"
+    (onSubmit)="eventRegister($event)"
+  >
+  </json-schema-form>
+</div>
+<div *ngIf="newFormValues" class="console">
+  <div class="title_terminal">
+    VALORES DEL FORMULARIO
+  </div>
+  <div>
+    <pre>{{newFormValues | json}}</pre>
+  </div>
+</div>

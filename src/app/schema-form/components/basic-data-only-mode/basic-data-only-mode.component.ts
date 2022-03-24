@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicDataOnlyModeComponent {
   exampleJsonObject = {
-    "first_name": "Jane", "last_name": "Doe", "age": 25, "is_company": false,
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "age": 25,
+    "is_company": false,
     "address": {
       "street_1": "123 Main St.",
       "street_2": null,
