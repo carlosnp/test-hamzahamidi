@@ -12,17 +12,17 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { BasicSchemaDataComponent } from './components/basic-schema-data/basic-schema-data.component';
 import { SchemaChoicesComponent } from './components/schema-choices/schema-choices.component';
 import { SchemaInputsComponent } from './components/schema-inputs/schema-inputs.component';
+import { SchemaInputsDataComponent } from './components/schema-inputs-data/schema-inputs-data.component';
 
 @NgModule({
   declarations: [
     BasicDataOnlyModeComponent,
     BaseSchemaComponent,
-    BasicSchemaDataComponent,
     SchemaChoicesComponent,
-    SchemaInputsComponent
+    SchemaInputsComponent,
+    SchemaInputsDataComponent
   ],
   imports: [
     CommonModule,
