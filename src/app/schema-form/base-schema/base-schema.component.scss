@@ -9,4 +9,33 @@
   mat-form-field.html-class-form  mat-hint {
     color: black !important;
   }
+  .form-basic-schema {
+    margin: 1rem 0;
+    padding: 1rem;
+    max-width: 500px;
+    margin: 1rem auto;
+  }
+  .form-basic-schema-data {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: #c8c8c8;
+  }
+  .console {
+    padding: 1rem;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid #c8c8c8;
+    color: white;
+    font-size: 16px;
+  }
+  .title_terminal {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 3rem;
+  }
 }
