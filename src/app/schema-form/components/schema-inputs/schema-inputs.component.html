@@ -1,14 +1,16 @@
 <app-schema-form
   [classForm]="'small'"
   [initValues]="newFormValues"
-  >
+  [errors]="errors"
+>
   <json-schema-form
     [loadExternalAssets]="true"
     [schema]="jsonSchema"
     [form]="formSchema"
-    [language]="'es'"
-    [framework]="'material-design'"
+    language="es"
+    framework="material-design"
     (onSubmit)="eventRegister($event)"
+    (validationErrors)="validationErrors($event)"
   >
   </json-schema-form>
 </app-schema-form>

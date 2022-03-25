@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SchemaFormRoutingModule } from './schema-form-routing.module';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 /** Componentes */
 import { BaseSchemaComponent } from './base-schema/base-schema.component';
 import { BasicDataOnlyModeComponent } from './components/basic-data-only-mode/basic-data-only-mode.component';
@@ -28,6 +32,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     SchemaFormRoutingModule,
     MaterialDesignFrameworkModule,
     FlexLayoutModule,

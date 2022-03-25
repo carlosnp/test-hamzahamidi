@@ -1,4 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+/**
+ * Modelos
+ */
+import {
+  FormErrors
+} from 'src/app/shared/models';
+
 
 @Component({
   selector: 'app-schema-form',
@@ -17,6 +24,11 @@ export class SchemaFormComponent {
    */
   @Input()
   initValues: {[index: string]: any} = {};
+  /**
+   * Errores del formulario
+   */
+  @Input()
+  errors: FormErrors[] = [];
   /**
    * Constructor del componente
    */
