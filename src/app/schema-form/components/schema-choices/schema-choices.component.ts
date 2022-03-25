@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-schema-choices',
   templateUrl: './schema-choices.component.html',
   styleUrls: ['./schema-choices.component.scss']
 })
-export class SchemaChoicesComponent implements OnInit {
+export class SchemaChoicesComponent {
   jsonSchema={
     "type": "object",
     "properties": {
@@ -21,19 +21,22 @@ export class SchemaChoicesComponent implements OnInit {
   formSchema = [
     {
       type: "help",
-      helpvalue: "<h1>Yo Ninja!</h1>"
+      helpvalue: "<h1>Formulario con Inputs de seleccion</h1>"
     },
     {
       "key": "firstname",
       "type": "text",
+      "name": "Nombre",
       "appearance": "standard",
       "htmlClass": "html-class-form",
       "placeholder": "Escribe tu nombre",
     },
     {
-      key: "surname",
-      type: "select",
-      titleMap: [
+      "key": "surname",
+      "type": "select",
+      "name": "Apellido",
+      "placeholder": "Selecciona un apellido",
+      "titleMap": [
         { value: "Andersson", name: "Andersson" },
         { value: "Johansson", name: "Johansson" },
         { value: "other", name: "Something else..."}
@@ -41,24 +44,27 @@ export class SchemaChoicesComponent implements OnInit {
       "htmlClass": "html-class-form",
     },
     {
-      key: "choice",
-      type: "radiobuttons",
-      style: {
+      "key": "choice",
+      "type": "radiobuttons",
+      "name":"Radio buttons",
+      "placeholder": "Selecciona una opcion",
+      "style": {
         selected: "primary",
         unselected: "btn-default"
       },
-      titleMap: [
+      "titleMap": [
         { value: "one", name: "Uno" },
         { value: "two", name: "Dos" },
         { value: "three", name: "Tres" }
-      ]
+      ],
+      "validationMessage": "Don't be greedy!"
     },
     {
-      type: "actions",
-      items: [
+      "type": "actions",
+      "items": [
         {
-          type: 'submit',
-          title: 'Ok',
+          "type": 'submit',
+          "title": 'Ok',
           "color":"blue",
         },
         {
@@ -74,12 +80,6 @@ export class SchemaChoicesComponent implements OnInit {
   ];
   newFormValues: any;
   constructor() { }
-
-  ngOnInit(): void {
-  }
-  isValidForm(event: any){
-    console.log('Es valido el formulario?', event)
-  }
   /**
    * Registro de eventos
    * @param event Formulario
@@ -87,13 +87,6 @@ export class SchemaChoicesComponent implements OnInit {
   eventRegister(event: any){
     console.log('Evento', event);
     this.newFormValues = event;
-  }
-  /**
-   * Registro de cambios en el formulario
-   * @param event Formulario
-   */
-  changeForm(event: any){
-    console.log('Change form', event)
   }
   cancel() {
     console.log('cancelo el formulario')

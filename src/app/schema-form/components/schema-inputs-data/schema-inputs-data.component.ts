@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-schema-inputs-data',
   templateUrl: './schema-inputs-data.component.html',
   styleUrls: ['./schema-inputs-data.component.scss']
 })
-export class SchemaInputsDataComponent implements OnInit {
+export class SchemaInputsDataComponent {
   jsonSchema={
     "type": "object",
     "title": "test_form",
@@ -32,6 +32,13 @@ export class SchemaInputsDataComponent implements OnInit {
     "required": ["name","email","comment"]
   }
   formSchema = [
+    {
+      type: "help",
+      helpvalue: `
+        <h1>Formulario de Inputs tipo text y textarea</h1>
+        <h3> <i>El formulario tiene data de entrada</i> </h3>
+      `
+    },
     {
       "key": "name",
       "type": "text",
@@ -69,18 +76,11 @@ export class SchemaInputsDataComponent implements OnInit {
   }
   newFormValues: any;
   constructor() { }
-
-  ngOnInit(): void {
-  }
-  isValidForm(event: any){
-    console.log('Es valido el formulario?', event)
-  }
   /**
    * Registro de eventos
    * @param event Formulario
    */
   eventRegister(event: any){
-    console.log('Evento', event);
     this.newFormValues = event;
   }
   /**

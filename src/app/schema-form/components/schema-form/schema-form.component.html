@@ -1,0 +1,15 @@
+<div [ngClass]="{
+      'form-basic-schema': classForm === 'small',
+      'form-basic-schema-data': classForm === 'big'
+    }"
+  >
+    <ng-content></ng-content>
+</div>
+<div *ngIf="initValues" class="console">
+  <div class="title_terminal">
+    VALORES DEL FORMULARIO
+  </div>
+  <div>
+    <pre>{{initValues | json}}</pre>
+  </div>
+</div>
