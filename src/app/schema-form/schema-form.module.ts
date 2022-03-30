@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { Bootstrap4FrameworkModule } from '@ajsf/bootstrap4';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     SchemaFormRoutingModule,
     MaterialDesignFrameworkModule,
+    Bootstrap4FrameworkModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatInputModule,
