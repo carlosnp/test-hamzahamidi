@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormErrors } from 'src/app/shared/models';
+import { FormInputsData, FormValuesData, SchemaInputsData } from './data';
 
 @Component({
   selector: 'app-schema-inputs-data',
@@ -6,75 +8,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./schema-inputs-data.component.scss']
 })
 export class SchemaInputsDataComponent {
-  jsonSchema={
-    "type": "object",
-    "title": "test_form",
-    "properties": {
-      "name":  {
-        "title": "Nombre",
-        "type": "string",
-        "minLength": 3,
-        "maxLength": 50
-      },
-      "email":  {
-        "title": "Email",
-        "type": "string",
-        "pattern": "^\\S+@\\S+$",
-        "description": "Email will be used for evil."
-      },
-      "comment": {
-        "title": "Comentario",
-        "type": "string",
-        "minLength": 10,
-        "maxLength": 200
-      },
-    },
-    "required": ["name","email","comment"]
-  }
-  formSchema = [
-    {
-      type: "help",
-      helpvalue: `
-        <h1>Formulario de Inputs tipo text y textarea</h1>
-        <h3> <i>El formulario tiene data de entrada</i> </h3>
-      `
-    },
-    {
-      "key": "name",
-      "type": "text",
-      "appearance": "standard",
-      "htmlClass": "html-class-form",
-      "placeholder": "Escribe tu nombre"
-    },
-    {
-      "key": "email",
-      "type": "email",
-      "appearance": "fill",
-      "description": "Email will be used for evil.",
-      "htmlClass": "html-class-form",
-    },
-    {
-      "key": "comment",
-      "type": "textarea",
-      "placeholder": "Make a comment",
-      "appearance": "outline",
-      "htmlClass": "html-class-form",
-    },
-    {
-      "type": "submit",
-      "title": "Enviar informacion",
-      // "color":"accent",
-      // "color":"warn",
-      // "color":"primary"
-      "color":"blue"
-    }
-  ];
-  data = {
-    "name": "Hassie Connelly",
-    "email": "your.email+fakedata68037@gmail.com",
-    "comment": "865 Goodwin Stream"
-  }
+  /**
+   * Lista local de los errores del formulario
+   */
+  errors: FormErrors[] = [];
+  /**
+   * Json Esquema
+   */
+  jsonSchema = SchemaInputsData;
+  /**
+   * Formulario
+   */
+  formSchema = FormInputsData;
+  /**
+   * Valores del formulario
+   */
+  data = FormValuesData;
+  /**
+   * Valores del formulario
+   */
   newFormValues: any;
+  /**
+   * Constructor del documento
+   */
   constructor() { }
   /**
    * Registro de eventos
@@ -84,10 +40,10 @@ export class SchemaInputsDataComponent {
     this.newFormValues = event;
   }
   /**
-   * Registro de cambios en el formulario
-   * @param event Formulario
+   * Obtiene los errores en la validacion de un formulario
+   * @param event
    */
-  changeForm(event: any){
-    console.log('Change form', event)
+  validationErrors(event: FormErrors[]){
+    this.errors = event;
   }
 }

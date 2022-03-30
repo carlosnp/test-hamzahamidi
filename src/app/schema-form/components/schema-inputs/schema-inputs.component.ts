@@ -14,7 +14,7 @@ export class SchemaInputsComponent {
    */
   errors: FormErrors[] = [];
   /**
-   * Esquema
+   * Json Esquema
    */
   jsonSchema = SchemaInputs;
   /**
