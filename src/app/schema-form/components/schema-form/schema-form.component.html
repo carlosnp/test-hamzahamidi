@@ -10,10 +10,10 @@
     VALORES DEL FORMULARIO
   </div>
   <div>
-    <pre>{{initValues | json}}</pre>
+    <pre style="color: #ffffff;">{{initValues | json}}</pre>
   </div>
 </div>
-<div *ngIf="errors" class="console-errors">
+<div *ngIf="errors && errors.length > 0" class="console-errors">
   <div class="title_terminal">
     Errores en el Formulario
   </div>
