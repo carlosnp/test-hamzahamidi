@@ -20,10 +20,10 @@ export class SchemaFormComponent {
   @Input()
   classForm: 'small' | 'big' = 'small';
   /**
-   * Valores iniciales del formulario
+   * Valores del formulario
    */
   @Input()
-  initValues: {[index: string]: any} = {};
+  dataForm: {[index: string]: any} = {};
   /**
    * Errores del formulario
    */
@@ -33,4 +33,12 @@ export class SchemaFormComponent {
    * Constructor del componente
    */
   constructor() { }
+  /**
+   * Valida si el objeto con los datos del formulario esta vacio
+   * @param data
+   * @returns
+   */
+  isEmptyData(data: {[index: string]: any} = {}) {
+    return Object.keys(data).length > 0;
+  }
 }

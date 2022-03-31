@@ -1,17 +1,17 @@
 <app-schema-form
   *ngIf="jsonSchema"
   [classForm]="'small'"
-  [initValues]="newFormValues"
+  [dataForm]="newFormValues"
   [errors]="errors"
 >
   <json-schema-form
     [loadExternalAssets]="true"
     [schema]="jsonSchema"
+    [form]="formSchema"
     [language]="'es'"
     framework="bootstrap-4"
     (onSubmit)="eventRegister($event)"
-    >
-    <!-- [form]="formSchema"
-    [data]="data" -->
+    (validationErrors)="validationErrors($event)"
+  >
   </json-schema-form>
 </app-schema-form>

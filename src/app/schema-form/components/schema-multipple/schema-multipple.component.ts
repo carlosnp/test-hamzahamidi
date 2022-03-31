@@ -41,6 +41,7 @@ export class SchemaMultippleComponent {
     * @param event Formulario
     */
    eventRegister(event: any){
+    console.log('Data del formulario', event);
      this.newFormValues = event;
    }
    /**
@@ -48,6 +49,7 @@ export class SchemaMultippleComponent {
     * @param event
     */
    validationErrors(event: FormErrors[]){
+     console.log('Errores del formulario', event);
      this.errors = event;
    }
 }

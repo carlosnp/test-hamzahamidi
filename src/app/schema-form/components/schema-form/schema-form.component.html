@@ -5,12 +5,12 @@
   >
     <ng-content></ng-content>
 </div>
-<div *ngIf="initValues" class="console">
+<div *ngIf="dataForm && isEmptyData(dataForm)" class="console">
   <div class="title_terminal">
     VALORES DEL FORMULARIO
   </div>
   <div>
-    <pre style="color: #ffffff;">{{initValues | json}}</pre>
+    <pre style="color: #ffffff;">{{dataForm | json}}</pre>
   </div>
 </div>
 <div *ngIf="errors && errors.length > 0" class="console-errors">
@@ -18,11 +18,12 @@
     Errores en el Formulario
   </div>
   <div *ngFor="let error of errors">
-    <div>{{error.message}}</div>
-    <div>{{error.keyword}}</div>
-    <div>{{error.dataPath}}</div>
-    <div>{{error.schemaPath}}</div>
+    <div> <strong>message:</strong> {{error.message}}</div>
+    <div><strong>keyword:</strong>{{error.keyword}}</div>
+    <div><strong>dataPath:</strong>{{error.dataPath}}</div>
+    <div><strong>schemaPath:</strong>{{error.schemaPath}}</div>
     <div class="errors">
+      <strong>params</strong>
       <pre>{{error.params|json}}</pre>
     </div>
   </div>
