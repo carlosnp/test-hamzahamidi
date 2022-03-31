@@ -24,6 +24,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { SchemaMultippleComponent } from './components/schema-multipple/schema-multipple.component';
+import { SchemaRefComponent } from './components/schema-ref/schema-ref.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SchemaMultippleComponent } from './components/schema-multipple/schema-m
     SchemaInputsComponent,
     SchemaInputsDataComponent,
     SchemaFormComponent,
-    SchemaMultippleComponent
+    SchemaMultippleComponent,
+    SchemaRefComponent
   ],
   imports: [
     CommonModule,

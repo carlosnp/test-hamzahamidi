@@ -1,15 +1,14 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormErrors } from 'src/app/shared/models';
-import { FormMultiple, FormMultipleData, SchemaMultiple } from './data';
-
+import { FormRef, FormRefData, SchemaRef } from './data';
 
 @Component({
-  selector: 'app-schema-multipple',
-  templateUrl: './schema-multipple.component.html',
-  styleUrls: ['./schema-multipple.component.scss'],
+  selector: 'app-schema-ref',
+  templateUrl: './schema-ref.component.html',
+  styleUrls: ['./schema-ref.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SchemaMultippleComponent {
+export class SchemaRefComponent {
   /**
    * Lista local de los errores del formulario
    */
@@ -17,15 +16,15 @@ export class SchemaMultippleComponent {
   /**
    * Json Esquema
    */
-  jsonSchema = SchemaMultiple;
+  jsonSchema = SchemaRef;
   /**
    * Formulario
    */
-  formSchema = FormMultiple;
+  formSchema = FormRef;
   /**
    * Valores del formulario
    */
-  data = FormMultipleData;
+  data = FormRefData;
   /**
    * Valores del formulario
    */
@@ -33,9 +32,7 @@ export class SchemaMultippleComponent {
   /**
    * Constructor del documento
    */
-  constructor(
-    private changeDetectorRef: ChangeDetectorRef,
-  ) {}
+  constructor() {}
   /**
    * Registro de eventos
    * @param event Formulario
