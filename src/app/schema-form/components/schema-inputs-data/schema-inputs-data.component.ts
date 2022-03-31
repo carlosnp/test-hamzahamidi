@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { FormErrors } from 'src/app/shared/models';
 import { FormInputsData, FormValuesData, SchemaInputsData } from './data';
 
 @Component({
   selector: 'app-schema-inputs-data',
   templateUrl: './schema-inputs-data.component.html',
-  styleUrls: ['./schema-inputs-data.component.scss']
+  styleUrls: ['./schema-inputs-data.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SchemaInputsDataComponent {
   /**
@@ -31,7 +32,9 @@ export class SchemaInputsDataComponent {
   /**
    * Constructor del documento
    */
-  constructor() { }
+  constructor(
+    private changeDetectorRef: ChangeDetectorRef,
+  ) {}
   /**
    * Registro de eventos
    * @param event Formulario

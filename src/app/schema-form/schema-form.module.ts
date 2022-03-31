@@ -15,12 +15,14 @@ import { SchemaInputsDataComponent } from './components/schema-inputs-data/schem
 import { SchemaFormComponent } from './components/schema-form/schema-form.component';
 /** Librerias */
 import { MaterialDesignFrameworkModule } from '@ajsf/material';
+import { Bootstrap4FrameworkModule } from '@ajsf/bootstrap4';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { Bootstrap4FrameworkModule } from '@ajsf/bootstrap4';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { Bootstrap4FrameworkModule } from '@ajsf/bootstrap4';
     MatInputModule,
     MatButtonModule,
     MatTabsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule,
+    MatGridListModule
   ],
   exports:[
     BaseSchemaComponent

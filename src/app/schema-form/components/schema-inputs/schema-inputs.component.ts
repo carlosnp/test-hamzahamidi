@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormErrors } from 'src/app/shared/models';
 import { FormInputs, FormValues, SchemaInputs } from './data';
 
@@ -6,7 +6,8 @@ import { FormInputs, FormValues, SchemaInputs } from './data';
 @Component({
   selector: 'app-schema-inputs',
   templateUrl: './schema-inputs.component.html',
-  styleUrls: ['./schema-inputs.component.scss']
+  styleUrls: ['./schema-inputs.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SchemaInputsComponent {
   /**

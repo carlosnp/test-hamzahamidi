@@ -13,11 +13,17 @@
     <pre>{{initValues | json}}</pre>
   </div>
 </div>
-<div *ngIf="errors.length > 0">
+<div *ngIf="errors" class="console-errors">
   <div class="title_terminal">
     Errores en el Formulario
   </div>
-  <div>
-    <pre>{{errors | json}}</pre>
+  <div *ngFor="let error of errors">
+    <div>{{error.message}}</div>
+    <div>{{error.keyword}}</div>
+    <div>{{error.dataPath}}</div>
+    <div>{{error.schemaPath}}</div>
+    <div class="errors">
+      <pre>{{error.params|json}}</pre>
+    </div>
   </div>
 </div>

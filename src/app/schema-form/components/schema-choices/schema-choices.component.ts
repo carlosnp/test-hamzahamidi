@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormChoices, SchemaChoices } from './data';
 
 @Component({
   selector: 'app-schema-choices',
   templateUrl: './schema-choices.component.html',
-  styleUrls: ['./schema-choices.component.scss']
+  styleUrls: ['./schema-choices.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SchemaChoicesComponent {
   /**

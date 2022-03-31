@@ -37,4 +37,17 @@
     font-weight: bold;
     height: 3rem;
   }
+  .console-errors {
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    font-size: 16px;
+  }
+  .errors {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: rgb(235, 235, 235);
+    color: red;
+  }
 }
