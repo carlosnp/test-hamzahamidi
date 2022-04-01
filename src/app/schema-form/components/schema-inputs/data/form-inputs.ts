@@ -46,5 +46,6 @@ export const FormInputs = [
     "type": "submit",
     "title": "Enviar informacion",
     "color":"blue"
-  }
+  },
+  { type: 'button', title: 'Cancel', onClick: "cancel()" }
 ];

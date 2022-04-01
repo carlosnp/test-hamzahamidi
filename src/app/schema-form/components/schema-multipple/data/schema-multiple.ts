@@ -11,7 +11,7 @@ export const SchemaMultiple = {
           "maxLength": 50
         },
         "switch": {
-          "title": "Ojala te lleve er diablo?",
+          "title": "mostrar campo correo?",
           "type": "boolean"
         },
         "email": {
