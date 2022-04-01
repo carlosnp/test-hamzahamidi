@@ -16,6 +16,8 @@ export enum FormType {
   CHECKBOX = 'checkbox',
   /**
    * Se usa para un campo de esquema tipo 'object'
+   * fieldset and section doesn't need a key. You can create generic groups with them.
+   * They do need a list of items to have as children.
    */
   FIELDSET = 'fieldset',
   /**
